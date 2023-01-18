@@ -2,30 +2,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
 public class LevelManager : MonoBehaviour
 {
-    public Button Level1_button, Level2_button, Level3_button;
-    public static bool Level1, Level2, Level3;
-
-    private void Start()
+    public void Level1()
     {
-        Level1 = true;
-
+        SceneManager.LoadScene("Level1");
     }
-
-    private void Update()
+    public void Level2()
     {
-        if (Level2 == true)
-        {
-            Level2_button.interactable = true;
-        }
-
-        if (Level3 == true)
-        {
-            Level3_button.interactable = true;
-        }
+        SceneManager.LoadScene("Level2");
     }
+    public void Level3()
+    {
+        SceneManager.LoadScene("Level3");
+    }
+    
 }
